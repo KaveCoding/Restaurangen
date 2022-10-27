@@ -1,12 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Restaurangen
+﻿namespace Restaurangen
 {
-    internal class Waiter
+    internal class Waiter : Person
     {
+        public void Serve()
+        {
+
+        }
+
+        internal void GetFood()
+        {
+
+        }
+
+        internal void GetDrink()
+        {
+
+        }
+
+        internal void GetBill()
+        {
+
+        }
+
+        internal void TakePayment()
+        {
+
+        }
+
+
+
     }
 }
