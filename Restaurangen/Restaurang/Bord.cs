@@ -8,8 +8,15 @@ namespace Restaurangen.Restaurang
 {
     internal class Bord
     {
-        public int AntalSomFårPlats { get; set; }
-        public int Kvalitet { get; set; }
+
+        internal int AntalSomFårPlats { get; set; }
+        internal int Kvalitet { get; set; }
+
+        public Bord(int antal_som_får_plats, int kvalitet)
+        {
+            AntalSomFårPlats = antal_som_får_plats;
+            Kvalitet = kvalitet;
+        }
 
         // public List<Maträtter> { get; set; }
         //  Nota { get; set; }
