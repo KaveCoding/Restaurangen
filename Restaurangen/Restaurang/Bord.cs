@@ -10,6 +10,7 @@ namespace Restaurangen.Restaurang
     {
         public int AntalSomFårPlats { get; set; }
         public int Kvalitet { get; set; }
+
         // public List<Maträtter> { get; set; }
         //  Nota { get; set; }
     }
