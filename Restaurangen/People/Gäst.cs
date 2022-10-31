@@ -21,5 +21,10 @@ namespace Restaurangen.People
         internal int Mängd_pengar { get; set; }
         internal int Antal_i_sällskapet { get; set; }
         internal int Nöjdhet { get; set; }
+
+        void ätMat()
+        {
+
+        }
     }
 }
