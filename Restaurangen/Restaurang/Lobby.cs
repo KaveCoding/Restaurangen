@@ -9,8 +9,6 @@ namespace Restaurangen.Restaurang
 {
     internal class Lobby
     {
-        
-
         public static List<Bord> generateTables(List<Bord> listname, int numberOfTables, int size_of_table)
         {
             for (int i = 0; i < numberOfTables; i++)
@@ -22,7 +20,7 @@ namespace Restaurangen.Restaurang
             return listname;
         }
 
-        static void create_Tables(string[] args)
+        static List<Bord> create_Tables()
         {
             List<Bord> tables = new List<Bord>();
             List<Bord> small_tables = generateTables(tables, 5, 2);
@@ -36,17 +34,17 @@ namespace Restaurangen.Restaurang
             {
                 tables.Add(bord);
             }
+            return tables;
 
         }
 
+        List<Bord> All_tables = create_Tables();    //alla bord är sparade här!
 
         List<Waiter> waiters = new List<Waiter>();
 
         List<Kock> chefs = new List<Kock>();
 
         List<Gäst> guests = new List<Gäst>();
-
-
 
         Kök kitchen = new Kök(false);
 

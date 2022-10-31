@@ -1,4 +1,6 @@
-﻿namespace Restaurangen.GUI
+﻿using Restaurangen.Restaurang;
+
+namespace Restaurangen.GUI
 {
     internal class Program
     {
