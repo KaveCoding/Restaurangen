@@ -8,12 +8,12 @@ namespace Restaurangen.Restaurang.Maträtter
 {
     internal class Maträtt
     {
-        public string Namn { get; set; }
-        public int Pris { get; set; }
-        public int Kvalité { get; set; }
-        public int Destination_bord { get; set; }
+        internal string Namn { get; set; }
+        internal int Pris { get; set; }
+        internal int Kvalité { get; set; }
+        internal int Destination_bord { get; set; }
 
-        Maträtt(string namn, int pris, int kvalité, int destination_bord)
+        public Maträtt(string namn, int pris, int kvalité, int destination_bord)
         {
             Namn = namn;
             Pris = pris;

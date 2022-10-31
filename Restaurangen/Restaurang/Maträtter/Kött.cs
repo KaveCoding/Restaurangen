@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Restaurangen.Restaurang.Maträtter
 {
-    internal class Kött
+    internal class Kött : Maträtt
     {
+        internal Kött(string namn, int pris, int kvalité, int destination_bord) : base(namn, pris, kvalité, destination_bord)
+        {
+            Namn = namn;
+            Pris = pris;
+            Kvalité = kvalité;
+            Destination_bord = destination_bord;
+        }
     }
 }
