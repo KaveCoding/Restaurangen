@@ -13,30 +13,51 @@
         private bool Busy { get; set; }
         private int Servicenivå { get; set; }
 
-        internal void Serve()
+        internal void work()
         {
+             void bemöta_gäst()
+            {
 
+            }
+
+             void visa_bord()
+            {
+
+            }
+
+             void ge_meny()
+            {
+
+            }
+
+             void ta_Beställning()
+            {
+
+            }
+
+             void hämta_mat()
+            {
+
+            }
+             void servera_mat()
+            {
+
+            }
+             void ta_Emot_Pengar()
+            {
+
+            }
+
+             void duka_undan()
+            {
+
+            }
         }
 
-        internal void GetFood()
-        {
+        
 
-        }
 
-        internal void GetDrink()
-        {
 
-        }
-
-        internal void GetBill()
-        {
-
-        }
-
-        internal void TakePayment()
-        {
-
-        }
 
 
 
