@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Restaurangen.Restaurang.Maträtter
 {
-    internal class Maträtt
+    internal abstract class Maträtt
     {
         internal string Namn { get; set; }
         internal int Pris { get; set; }
