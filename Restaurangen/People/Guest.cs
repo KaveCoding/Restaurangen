@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Restaurangen.People
 {
-    internal class Guest
+    internal class Guest : Person
     {
+        public Guest(string name) : base(name)
+        {
+
+        }
     }
 }

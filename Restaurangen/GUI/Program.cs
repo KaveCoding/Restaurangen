@@ -1,10 +1,12 @@
-﻿namespace Restaurangen.GUI
+﻿using GUI;
+
+namespace Restaurangen.GUI
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-           
+            
         }
     }
 }
