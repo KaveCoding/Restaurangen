@@ -9,26 +9,26 @@ namespace Restaurangen.Restaurang
 {
     internal class Lobby
     {
-        private List<Bord> tableList = new List<Bord>();
+        private List<Bord> tableList { get; set; }
         private List<Waiter>waiterList = new List<Waiter>();
         private List<Company>companyWaitingList = new List<Company>();
         private int counterRestaurant { get; set; }
 
-        Lobby (List<Bord> tableList)
+        Lobby (List<Bord> TableList)
         {
-            
+            TableList = tableList;
         }
-        Lobby (List<Waiter> waiterList)
+        Lobby (List<Waiter> WaiterList)
         {
-
+            WaiterList = waiterList;
         }
-        Lobby (List<Company> companyWaitingList)
+        Lobby (List<Company> CompanyWaitingList)
         {
-
+            CompanyWaitingList = companyWaitingList;
         }
-        Lobby (int counterRestaurant)
+        public Lobby (int CounterRestaurant)
         {
-
+            CounterRestaurant = counterRestaurant;
         }
 
         public static void LobbyRun()
