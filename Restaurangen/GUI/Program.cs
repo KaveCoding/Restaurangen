@@ -6,7 +6,7 @@ namespace Restaurangen.GUI
     {
         static void Main(string[] args)
         {
-           
+
         }
     }
 }
