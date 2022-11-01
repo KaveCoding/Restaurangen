@@ -17,8 +17,9 @@ namespace Restaurangen.Restaurang
         {
             AntalSomFårPlats = antal_som_får_plats;
             Kvalitet = kvalitet;
+            Bordnummer = bordnummer;
 
-        }
+    }
 
         // public List<Maträtter> { get; set; }
         //  Nota { get; set; }

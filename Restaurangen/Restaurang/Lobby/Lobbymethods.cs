@@ -10,13 +10,23 @@ namespace Restaurangen.Restaurang.Lobby
     {
         internal class Lobby
         {
-            public static List<Bord> generateTables(List<Bord> listname, int numberOfTables, int size_of_table)
+
+            public static List<Bord> generateTables(List<Bord> listname, int numberOfTables, int size_of_table_small, int size_of_table_big)
             {
+                int tablenumber = 0;
                 for (int i = 0; i < numberOfTables; i++)
                 {
                     Random random = new Random();
-                    Bord bord = new Bord(size_of_table, random.Next(1, 5), 0); //bordnummer sist att fixa;
+                    Bord bord = new Bord(size_of_table_small, random.Next(1, 5), tablenumber); //bordnummer sist att fixa;
                     listname.Add(bord);
+                    tablenumber++;
+                }
+                for (int i = 0; i < numberOfTables; i++)
+                {
+                    Random random = new Random();
+                    Bord bord = new Bord(size_of_table_big, random.Next(1, 5), tablenumber); //bordnummer sist att fixa;
+                    listname.Add(bord);
+                    tablenumber++;
                 }
                 return listname;
             }
@@ -24,17 +34,12 @@ namespace Restaurangen.Restaurang.Lobby
            public static List<Bord> create_Tables()
             {
                 List<Bord> tables = new List<Bord>();
-                List<Bord> small_tables = generateTables(tables, 5, 2);
-                List<Bord> large_tables = generateTables(tables, 5, 4);
+                List<Bord> Generated_tables = generateTables(tables, 5, 2,4);
 
-                foreach (Bord bord in small_tables)
+                foreach (Bord bord in Generated_tables)
                 {
                     tables.Add(bord);
-                }
-                foreach (Bord bord in large_tables)
-                {
-                    tables.Add(bord);
-                }
+                }                
                 return tables;
             }
         }
