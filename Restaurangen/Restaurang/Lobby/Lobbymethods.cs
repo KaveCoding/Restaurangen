@@ -11,20 +11,20 @@ namespace Restaurangen.Restaurang.Lobby
         internal class Lobby
         {
 
-            public static List<Bord> generateTables(List<Bord> listname, int numberOfTables, int size_of_table_small, int size_of_table_big)
+            public static List<Bord> generateTables(List<Bord> listname, int numberOfTables, int size_of_small_table, int size_of_big_table)
             {
                 int tablenumber = 0;
                 for (int i = 0; i < numberOfTables; i++)
                 {
                     Random random = new Random();
-                    Bord bord = new Bord(size_of_table_small, random.Next(1, 5), tablenumber); //bordnummer sist att fixa;
+                    Bord bord = new Bord(size_of_small_table, random.Next(1, 5), tablenumber); //bordnummer sist att fixa;
                     listname.Add(bord);
                     tablenumber++;
                 }
                 for (int i = 0; i < numberOfTables; i++)
                 {
                     Random random = new Random();
-                    Bord bord = new Bord(size_of_table_big, random.Next(1, 5), tablenumber); //bordnummer sist att fixa;
+                    Bord bord = new Bord(size_of_big_table, random.Next(1, 5), tablenumber); //bordnummer sist att fixa;
                     listname.Add(bord);
                     tablenumber++;
                 }
