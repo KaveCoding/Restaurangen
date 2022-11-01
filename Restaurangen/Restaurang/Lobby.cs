@@ -10,8 +10,8 @@ namespace Restaurangen.Restaurang
     internal class Lobby
     {
         private List<Bord> tableList { get; set; }
-        private List<Waiter>waiterList = new List<Waiter>();
-        private List<Company>companyWaitingList = new List<Company>();
+        private List<Waiter>waiterList { get; set; }
+        private List<Company>companyWaitingList { get; set; }
         private int counterRestaurant { get; set; }
 
         Lobby (List<Bord> TableList)
