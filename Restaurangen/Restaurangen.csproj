@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\GUI\GUI\GUI\GUI.csproj" />
+    <ProjectReference Include="..\..\GUI\GUI\GUI\GUI.csproj" />
   </ItemGroup>
 
 </Project>
