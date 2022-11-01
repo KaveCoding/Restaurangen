@@ -22,7 +22,7 @@ namespace Restaurangen.People
         {
              void taEmotBeställning()
             {
-
+                
             }
 
              void lagaMat()

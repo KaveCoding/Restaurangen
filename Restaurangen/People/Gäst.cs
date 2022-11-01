@@ -9,7 +9,7 @@ namespace Restaurangen.People
 {
     internal class Gäst : Person
     {
-
+       
         public Gäst(string namn, int mängd_pengar, int antal_i_sällskapet, int nöjdhet) : base(namn)
         {
             Name = namn;
