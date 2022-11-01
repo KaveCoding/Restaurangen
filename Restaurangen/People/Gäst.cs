@@ -28,10 +28,18 @@ namespace Restaurangen.People
             Name = namn;
             Mängd_pengar = mängd_pengar;
             Nöjdhet = nöjdhet;
-            sällskap = generate_company(3);         // går att göra antingen en till eller 3 stycken till
+
+            while (true)
+            {
+                int slumpadtal = random.Next(1, 4);
+                if (slumpadtal == 1 || slumpadtal == 3)
+                {
+                    sällskap = generate_company(slumpadtal);
+                    break;
+                }
+            }
 
         }
-
 
         public static List <Sällskap> generate_company(int number_of_company)
 
@@ -47,9 +55,6 @@ namespace Restaurangen.People
 
             return sällskap;
         }
-
-
-
 
         internal class Sällskap 
 
