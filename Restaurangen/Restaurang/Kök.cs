@@ -8,8 +8,11 @@ namespace Restaurangen.Restaurang
 {
     internal class Kök
     {
+
+
+        // internal static List<string> beställningar { get; set; }
         internal bool FoodIsReady { get; set; }
-        //private List<beställningar>  { get; set; }
+        
 
 
     public Kök (bool foodIsReady)

@@ -10,6 +10,7 @@ namespace Restaurangen.Restaurang
     
     internal class Lobby
     {
+        internal static Random random = new Random();
         public static string[] ArrayNameList = { "Mohammed", "Thom", "Bilal", "Daniel", "Erik", "Elias", "Emma", "Kenneth", "Andersson", "Johansson", "Karlssson","Nillsson", "Eriksson"
             , "Larsson","Olsson","Persson","Svensson","Gustavsson","Petterson","Johnsson","Jansson","Hansson","Bengtsson","Jönsson","Lindberg","Jakobsson","Magnusson","´Lindström"
             ,"Olofsson","Lindkvist","Lindgren","Berg","Axelsson","Bergström","Lundberg","Lind","Lundgren","Lundqvist","Mattsson","Berglund","Fredriksson","Samberg","Henriksson"
@@ -23,14 +24,12 @@ namespace Restaurangen.Restaurang
             int tablenumber = 0;
             for (int i = 0; i < numberOfTables; i++)
             {
-                Random random = new Random();
-                Bord bord = new Bord(size_of_small_table, random.Next(1, 5), tablenumber, true); ;
+                Bord bord = new Bord(size_of_small_table, random.Next(1, 5), tablenumber, true);
                 tables.Add(bord);
                 tablenumber++;
             }
             for (int i = 0; i < numberOfTables; i++)
             {
-                Random random = new Random();
                 Bord bord = new Bord(size_of_big_table, random.Next(1, 5), tablenumber, true);
                 tables.Add(bord);
                 tablenumber++;
@@ -44,7 +43,7 @@ namespace Restaurangen.Restaurang
             List<Waiter> waiters = new List<Waiter>();
             for (int i = 0; i < number_of_waiters; i++)
             {
-                Random random = new Random();
+               
                 Waiter waiter = new Waiter(ArrayNameList[random.Next(0, ArrayNameList.Length - 1)], random.Next(1, 5), false);
                 waiters.Add(waiter);
             }
@@ -57,9 +56,10 @@ namespace Restaurangen.Restaurang
             List<Kock> chefs = new List<Kock>();
             for (int i = 0; i <number_of_chefs ; i++)
             {
-                Random random = new Random();
+
                 Kock chef = new Kock(ArrayNameList[random.Next(0, ArrayNameList.Length - 1)], random.Next(1, 5));
                 chefs.Add(chef);
+
             }
 
             return chefs;
@@ -71,9 +71,10 @@ namespace Restaurangen.Restaurang
             List<Gäst> guests = new List<Gäst>();
             for (int i = 0; i < number_of_guests; i++)
             {
-                Random random = new Random();
-                Gäst guest = new Gäst(ArrayNameList[random.Next(0, ArrayNameList.Length - 1)], 1000, random.Next(1, 4), random.Next(1,5));
-                guests.Add(guest);
+
+                Gäst newgäst = new Gäst(ArrayNameList[random.Next(0, ArrayNameList.Length - 1)], 1000,  random.Next(1,5));
+
+                guests.Add(newgäst);
             }
 
             return guests;
@@ -84,6 +85,8 @@ namespace Restaurangen.Restaurang
         List<Kock> chefs = generatechefs(5);
 
         List<Gäst> guests = generateguests(30);
+
+        List<SällskapLista> sällskap = new List<SällskapLista>();
 
         Kök kitchen = new Kök(false);
     }
