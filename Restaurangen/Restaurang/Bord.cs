@@ -10,14 +10,19 @@ namespace Restaurangen.Restaurang
     {
 
         internal int AntalSomFårPlats { get; set; }
-        internal int Kvalitet { get; set; }
+        internal int Kvalité { get; set; }
         internal int Bordnummer { get; set; }
+        internal bool IsAvailable { get; set; }
 
-        public Bord(int antal_som_får_plats, int kvalitet, int bordnummer)
+        //nota
+        //maträtter på bordet
+
+        public Bord(int antal_som_får_plats, int kvalité, int bordnummer, bool isavailable)
         {
             AntalSomFårPlats = antal_som_får_plats;
-            Kvalitet = kvalitet;
+            Kvalité = kvalité;
             Bordnummer = bordnummer;
+            IsAvailable = isavailable;
 
     }
 
