@@ -79,11 +79,11 @@ namespace Restaurangen.Restaurang
             return guests;
         }
 
-        List<Waiter> waiters = new List<Waiter>();
+        List<Waiter> waiters = generateWaiters(3);
 
-        List<Kock> chefs = new List<Kock>();
+        List<Kock> chefs = generatechefs(5);
 
-        List<Gäst> guests = new List<Gäst>();
+        List<Gäst> guests = generateguests(30);
 
         Kök kitchen = new Kök(false);
     }
