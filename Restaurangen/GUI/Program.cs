@@ -1,4 +1,5 @@
 ﻿using Restaurangen.Restaurang;
+using Restaurangen.Restaurang.Lobby;
 
 namespace Restaurangen.GUI
 {
@@ -6,7 +7,7 @@ namespace Restaurangen.GUI
     {
         static void Main(string[] args)
         {
-           
+           Restaurang.Lobby.Lobbymethods
         }
     }
 }
