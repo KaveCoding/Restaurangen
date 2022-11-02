@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Restaurangen.People
 {
-    internal class Kock : Person
+    internal class Chef : Person
     {
 
-        public Kock(string namn, int kompetens) : base(namn)
+        public Chef(string namn, int kompetens) : base(namn)
         {
             Name = namn;
             Kompetens = kompetens;

@@ -5,11 +5,11 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using static Restaurangen.People.Gäst;
+using static Restaurangen.People.Guest;
 
 namespace Restaurangen.People
 {
-    internal class Gäst : Person
+    internal class Guest : Person
     {
         static Random random = new Random();
         internal static string[] ArrayNameList = { "Mohammed", "Thom", "Bilal", "Daniel", "Erik", "Elias", "Emma", "Kenneth", "Andersson", "Johansson", "Karlssson","Nillsson", "Eriksson"
@@ -24,7 +24,7 @@ namespace Restaurangen.People
         internal static List<Sällskap> sällskap = new List<Sällskap>();
         internal static int GroupSize { get; set; }
 
-        public Gäst(string namn, int mängd_pengar, int nöjdhet) : base(namn)
+        public Guest(string namn, int mängd_pengar, int nöjdhet) : base(namn)
         {
             Name = namn;
             Mängd_pengar = mängd_pengar;
