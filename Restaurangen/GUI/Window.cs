@@ -1,26 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GUI
+﻿namespace GUI
 {
     public class Window
     {
+        public static void OurDraw(string header, int fromLeft, int fromTop, string[,] graphics)
+        {
+            Console.SetCursorPosition(fromLeft, fromTop);
+
+            Console.Write('┌' + " ");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write(header);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(" " + new String('─', graphics[1].Length - header.Length) + '┐');
+        }
+
+
+
         public static void Draw(string header, int fromLeft, int fromTop, string[] graphics)
         {
 
-            int width = 0;
-            for (int i = 0; i < graphics.Length; i++)
-            {
-                if (graphics[i].Length > width)
-                {
-                    width = graphics[i].Length;
-                }
-            }
-            if (width < header.Length + 4)
-            { width = header.Length + 4; };
+            //int width = 0;
+            //for (int i = 0; i < graphics.Length; i++)
+            //{
+            //    if (graphics[i].Length > width)
+            //    {
+            //        width = graphics[i].Length;
+            //    }
+            //}
+            //if (width < header.Length + 4)
+            //{ width = header.Length + 4; };
 
             Console.SetCursorPosition(fromLeft, fromTop);
             if (header != "")

@@ -9,13 +9,16 @@ namespace Restaurangen.Restaurang
 {
     internal class Kök
     {
-        private List<Kock> kockList { get; set; }
+        private List<Kock> KockList { get; set; }
 
-        private bool foodIsReady { get; set; }
+        private bool FoodIsReady { get; set; }
 
+        Kök (List<Kock> kockList)
+        {
+            KockList = kockList;
+        }
 
-
-        Kök (bool FoodIsReady)
+        Kök (bool foodIsReady)
         {
             FoodIsReady = foodIsReady;
         }

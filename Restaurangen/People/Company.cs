@@ -8,7 +8,12 @@ namespace Restaurangen.People
 {
     internal class Company
     {
-        public List<Guest> waitingCompanies { get; set; }
-        public int timeWaiting { get; set; }   
+        private List<Guest> waitingCompanies { get; set; }
+        private int timeWaiting { get; set; }
+
+        public Company()
+        {
+
+        }
     }
 }
