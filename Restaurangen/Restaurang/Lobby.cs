@@ -1,5 +1,6 @@
 ﻿using Restaurangen.People;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +37,7 @@ namespace Restaurangen.Restaurang
             }
             return tables;
         }
-
+        List<Bord> tables = generateTables(5, 2, 4);
         public static List<Waiter> generateWaiters(int number_of_waiters)
 
         {
@@ -49,6 +50,7 @@ namespace Restaurangen.Restaurang
             }
             return waiters;
         }
+        List<Waiter> waiters = generateWaiters(3);
 
         public static List<Kock> generatechefs(int number_of_chefs)
 
@@ -65,6 +67,8 @@ namespace Restaurangen.Restaurang
             return chefs;
         }
 
+        List<Kock> chefs = generatechefs(5);
+
         public static List<Gäst> generateguests(int number_of_guests)
 
         {
@@ -80,12 +84,20 @@ namespace Restaurangen.Restaurang
             return guests;
         }
 
-        List<Waiter> waiters = generateWaiters(3);
+        static List<Gäst> guests = generateguests(30);
 
-        List<Kock> chefs = generatechefs(5);
+       
+        static Queue<Gäst> queue = Add_guests_to_queue();
 
-        List<Gäst> guests = generateguests(30);
-
+        static Queue<Gäst> Add_guests_to_queue()
+        {
+            foreach (Gäst guest in guests)
+            {
+                queue.Enqueue(guest);
+            }
+            return queue;
+        }
+        
         List<SällskapLista> sällskap = new List<SällskapLista>();
 
         Kök kitchen = new Kök(false);

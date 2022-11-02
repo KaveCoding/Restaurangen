@@ -21,7 +21,8 @@ namespace Restaurangen.People
 
         internal int Mängd_pengar { get; set; }
         internal int Nöjdhet { get; set; }
-        internal static List<Sällskap> sällskap = new List<Sällskap>(); 
+        internal static List<Sällskap> sällskap = new List<Sällskap>();
+        internal static int GroupSize { get; set; }
 
         public Gäst(string namn, int mängd_pengar, int nöjdhet) : base(namn)
         {
@@ -34,6 +35,7 @@ namespace Restaurangen.People
                 int slumpadtal = random.Next(1, 4);
                 if (slumpadtal == 1 || slumpadtal == 3)
                 {
+                    GroupSize = slumpadtal + 1;
                     sällskap = generate_company(slumpadtal);
                     break;
                 }

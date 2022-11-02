@@ -18,18 +18,18 @@ namespace Restaurangen.People
         internal int Kompetens { get; set; }
 
 
-        internal void work()
-        {
-             void taEmotBeställning()
-            {
+        //internal void work()
+        //{
+        //     void taEmotBeställning()
+        //    {
 
-            }
+        //    }
 
-             void lagaMat()
-            {
+        //     void lagaMat()
+        //    {
 
-            }
-        }
+        //    }
+        //}
  
     }
 
