@@ -35,10 +35,10 @@ namespace Restaurangen.Restaurang
         {
 
         }
-        public static void PrintMe()
-        {
+        //public static void PrintMe()
+        //{
 
-        }
+        //}
         public static void Count()
         {
 

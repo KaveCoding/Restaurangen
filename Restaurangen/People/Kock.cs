@@ -8,14 +8,13 @@ namespace Restaurangen.People
 {
     internal class Kock : Person
     {
-
-        public Kock(string namn, int kompetens) : base(namn)
-        {
-            Name = namn;
-            Kompetens = kompetens;
-        }
-
         internal int Kompetens { get; set; }
+
+        public Kock(string Namn, int Kompetens) : base(Namn)
+        {
+            Namn = namn;
+            Kompetens = Kompetens;
+        }
 
 
         internal void work()

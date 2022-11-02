@@ -2,11 +2,11 @@
 {
     public abstract class Person
     {
-            public Person(string name)
+        public string namn { get; set; }
+        public Person(string Namn)
             {
-                Name = name;
+                Namn = namn;
             }
-            public string Name { get; set; }
         }
     }
 
