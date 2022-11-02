@@ -8,6 +8,8 @@ namespace Restaurangen.People
 {
     internal class SällskapLista
     {
+
+
         //tid
         //antal i sällskap
 

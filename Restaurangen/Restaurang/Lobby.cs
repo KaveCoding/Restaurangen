@@ -101,6 +101,7 @@ namespace Restaurangen.Restaurang
         List<SällskapLista> sällskap = new List<SällskapLista>();
 
         Kök kitchen = new Kök(false);
+        
     }
 
 }
