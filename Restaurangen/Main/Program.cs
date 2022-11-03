@@ -8,12 +8,12 @@ namespace GUI
     {
         static void Main(string[] args)
         {
-            printMethod();
+            printTables();
 
 
+            
 
-
-            static void printMethod()
+            static void printTables()
             {
                 List<string> todoList = new List<string>();
 

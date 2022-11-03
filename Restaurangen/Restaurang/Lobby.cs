@@ -76,7 +76,7 @@ namespace Restaurangen.Restaurang
                     Chef chef = new Chef(ArrayNameList[random.Next(0, ArrayNameList.Length - 1)], random.Next(1, 5));
                     chefs.Add(chef);
 
-                }
+                 }
 
                 return chefs;
             }
