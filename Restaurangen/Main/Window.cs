@@ -8,15 +8,15 @@ namespace GUI
 {
     public class Window
     {
-        public static void Draw(string header, int fromLeft, int fromTop, string[] graphics)
+        public static void Draw(string header, int fromLeft, int fromTop, List<string> graphics)
         {
 
             int width = 0;
-            for (int i = 0; i < graphics.Length; i++)
+            for (int i = 0; i < graphics.Count; i++)
             {
-                if (graphics[i].Length > width)
+                if (graphics[i].Count() > width)
                 {
-                    width = graphics[i].Length;
+                    width = graphics[i].Count();
                 }
             }
             if (width < header.Length + 4)
@@ -37,10 +37,10 @@ namespace GUI
             }
             Console.WriteLine();
             int maxRows = 0;
-            for (int j = 0; j < graphics.Length; j++)
+            for (int j = 0; j < graphics.Count; j++)
             {
                 Console.SetCursorPosition(fromLeft, fromTop + j + 1);
-                Console.WriteLine('│' + " " + graphics[j] + new String(' ', width - graphics[j].Length + 1) + '│');
+                Console.WriteLine('│' + " " + graphics[j] + new String(' ', width - graphics[j].Count() + 1) + '│');
                 maxRows = j;
             }
             Console.SetCursorPosition(fromLeft, fromTop + maxRows + 2);

@@ -8,14 +8,37 @@ namespace GUI
     {
         static void Main(string[] args)
         {
-            string[] todoList = new string[3];
-            todoList[0] = "Diska";
-            todoList[1] = "Mata katten";
-            todoList[2] = "Städa";
+            printMethod();
 
-            Window.Draw("Att göra", 1, 1, todoList);
+
+
+
+            static void printMethod()
+            {
+                List<string> todoList = new List<string>();
+
+                todoList.Add("Placeholder");
+
+                int bordnummer = 1;
+                int distance = 0;
+                for (int i = 0; i <= 4; i++)
+                {
+                    Window.Draw("Bord " + bordnummer, distance, 1, todoList);
+                    distance = distance + 20;
+                    bordnummer++;
+                }
+
+                distance = 0;
+                for (int i = 0; i <= 4; i++)
+                {
+                    Window.Draw("Bord " + bordnummer, distance, 10, todoList);
+                    distance = distance + 20;
+                    bordnummer++;
+                }
+            }
 
             Lobby lobby = new Lobby();
+
             Console.WriteLine("guestcount: " + lobby.Queue.Count());  //bara för test
             
             
